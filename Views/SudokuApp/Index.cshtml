@@ -1,0 +1,27 @@
+@{
+
+
+
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku Solver: @ViewBag.Title</title>
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'
+type='text/css'>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="title">Sudoku Solver</div>
+    <div class="main_block_container">
+        @Html.Partial("_MainBlock")
+        @Html.Partial("_Navigation")
+</div>
+</body>
+<footer>
+</footer>
+</html>

@@ -1,0 +1,25 @@
+@using SudokuChallengeMVC.Data
+    <div class="main_block">
+        @{ int blockCounter = 0; }
+        @* @for (int outer = 0; outer < 9; outer++)
+     {  *@
+        <div class="large_blocks">
+            @for (int inner = 0; inner < 81; inner++)
+            {
+                <div class="small_blocks">
+                    @{ var data = ViewBag.Message; }
+                @if (data[inner] != 0)
+                {
+                    <div class="number">@data[inner]</div>
+                }
+                else
+                {
+                    <div class="number"> </div>
+                }
+                    @{blockCounter++;}
+                </div>
+            }
+        </div>
+        @* { blockCounter++; }  @data.squares[inner].value *@
+    @* } *@
+    </div>

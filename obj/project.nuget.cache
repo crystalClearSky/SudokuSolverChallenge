@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "G+BAeOkVU+ef01piLDDUXNBtJfn6WrJ72cbBWf5eVk42Si8rSQj5jhsuJ28KmWLGxVQ7IY8fVVF0J8lasrNTxg==",
+  "success": true,
+  "projectFilePath": "C:\\Code\\Projects\\SudokuChallengeMVC\\SudokuChallengeMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Justice\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.0\\microsoft.aspnetcore.jsonpatch.3.1.0.nupkg.sha512",
+    "C:\\Users\\Justice\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.0\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.0.nupkg.sha512",
+    "C:\\Users\\Justice\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Justice\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Justice\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
