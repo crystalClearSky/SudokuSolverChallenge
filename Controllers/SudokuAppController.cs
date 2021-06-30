@@ -29,8 +29,9 @@ namespace SudokuChallengeMVC.Controllers
         private async Task<List<int>> GetPuzzleApi()
         {
             // This retrieve random Sudoku Data from remote API @ Sudoku Web Service
-            var response = await client.GetStringAsync("http://cs.utep.edu/cheon/ws/sudoku/new/?size=9&level=1");
-            //var response = "{\"response\":true,\"size\":\"9\",\"squares\":[{\"x\":0,\"y\":0,\"value\":5},{\"x\":0,\"y\":2,\"value\":9},{\"x\":0,\"y\":3,\"value\":3},{\"x\":0,\"y\":6,\"value\":6},{\"x\":0,\"y\":8,\"value\":1},{\"x\":1,\"y\":1,\"value\":7},{\"x\":1,\"y\":3,\"value\":5},{\"x\":1,\"y\":5,\"value\":6},{\"x\":1,\"y\":7,\"value\":3},{\"x\":2,\"y\":2,\"value\":6},{\"x\":2,\"y\":4,\"value\":8},{\"x\":2,\"y\":5,\"value\":7},{\"x\":2,\"y\":7,\"value\":5},{\"x\":2,\"y\":8,\"value\":2},{\"x\":3,\"y\":1,\"value\":9},{\"x\":3,\"y\":2,\"value\":2},{\"x\":3,\"y\":5,\"value\":1},{\"x\":3,\"y\":6,\"value\":5},{\"x\":3,\"y\":7,\"value\":6},{\"x\":4,\"y\":1,\"value\":5},{\"x\":4,\"y\":3,\"value\":6},{\"x\":4,\"y\":4,\"value\":4},{\"x\":4,\"y\":5,\"value\":2},{\"x\":4,\"y\":7,\"value\":9},{\"x\":5,\"y\":2,\"value\":3},{\"x\":5,\"y\":3,\"value\":8},{\"x\":5,\"y\":4,\"value\":5},{\"x\":5,\"y\":6,\"value\":2},{\"x\":6,\"y\":0,\"value\":9},{\"x\":6,\"y\":2,\"value\":7},{\"x\":6,\"y\":3,\"value\":4},{\"x\":6,\"y\":4,\"value\":6},{\"x\":6,\"y\":7,\"value\":8},{\"x\":7,\"y\":0,\"value\":3},{\"x\":7,\"y\":1,\"value\":1},{\"x\":7,\"y\":3,\"value\":2},{\"x\":7,\"y\":5,\"value\":8},{\"x\":7,\"y\":7,\"value\":4},{\"x\":7,\"y\":8,\"value\":6},{\"x\":8,\"y\":0,\"value\":6},{\"x\":8,\"y\":8,\"value\":5}]}";
+            //var response = await client.GetStringAsync("http://cs.utep.edu/cheon/ws/sudoku/new/?size=9&level=1");
+            var response = "{\"response\":true,\"size\":\"9\",\"squares\":[{\"x\":0,\"y\":0,\"value\":5},{\"x\":0,\"y\":2,\"value\":9},{\"x\":0,\"y\":3,\"value\":3},{\"x\":0,\"y\":6,\"value\":6},{\"x\":0,\"y\":8,\"value\":1},{\"x\":1,\"y\":1,\"value\":7},{\"x\":1,\"y\":3,\"value\":5},{\"x\":1,\"y\":5,\"value\":6},{\"x\":1,\"y\":7,\"value\":3},{\"x\":2,\"y\":2,\"value\":6},{\"x\":2,\"y\":4,\"value\":8},{\"x\":2,\"y\":5,\"value\":7},{\"x\":2,\"y\":7,\"value\":5},{\"x\":2,\"y\":8,\"value\":2},{\"x\":3,\"y\":1,\"value\":9},{\"x\":3,\"y\":2,\"value\":2},{\"x\":3,\"y\":5,\"value\":1},{\"x\":3,\"y\":6,\"value\":5},{\"x\":3,\"y\":7,\"value\":6},{\"x\":4,\"y\":1,\"value\":5},{\"x\":4,\"y\":3,\"value\":6},{\"x\":4,\"y\":4,\"value\":4},{\"x\":4,\"y\":5,\"value\":2},{\"x\":4,\"y\":7,\"value\":9},{\"x\":5,\"y\":2,\"value\":3},{\"x\":5,\"y\":3,\"value\":8},{\"x\":5,\"y\":4,\"value\":5},{\"x\":5,\"y\":6,\"value\":2},{\"x\":6,\"y\":0,\"value\":9},{\"x\":6,\"y\":2,\"value\":7},{\"x\":6,\"y\":3,\"value\":4},{\"x\":6,\"y\":4,\"value\":6},{\"x\":6,\"y\":7,\"value\":8},{\"x\":7,\"y\":0,\"value\":3},{\"x\":7,\"y\":1,\"value\":1},{\"x\":7,\"y\":3,\"value\":2},{\"x\":7,\"y\":5,\"value\":8},{\"x\":7,\"y\":7,\"value\":4},{\"x\":7,\"y\":8,\"value\":6},{\"x\":8,\"y\":0,\"value\":6},{\"x\":8,\"y\":8,\"value\":5}]}";
+            //var response = "{\"response\":true,\"size\":\"9\",\"squares\":[{\"x\":0,\"y\":0,\"value\":5},{\"x\":0,\"y\":2,\"value\":9},{\"x\":0,\"y\":3,\"value\":3},{\"x\":0,\"y\":6,\"value\":6},{\"x\":0,\"y\":8,\"value\":1},{\"x\":1,\"y\":1,\"value\":7},{\"x\":1,\"y\":3,\"value\":5},{\"x\":1,\"y\":5,\"value\":6},{\"x\":1,\"y\":7,\"value\":3},{\"x\":2,\"y\":2,\"value\":6},{\"x\":2,\"y\":4,\"value\":8},{\"x\":2,\"y\":5,\"value\":7},{\"x\":2,\"y\":7,\"value\":5},{\"x\":2,\"y\":8,\"value\":2},{\"x\":3,\"y\":1,\"value\":9},{\"x\":3,\"y\":2,\"value\":2},{\"x\":3,\"y\":5,\"value\":1},{\"x\":3,\"y\":6,\"value\":5},{\"x\":3,\"y\":7,\"value\":6},{\"x\":4,\"y\":1,\"value\":5},{\"x\":4,\"y\":3,\"value\":6},{\"x\":4,\"y\":4,\"value\":4},{\"x\":4,\"y\":5,\"value\":2},{\"x\":4,\"y\":7,\"value\":9},{\"x\":5,\"y\":2,\"value\":3},{\"x\":5,\"y\":3,\"value\":8},{\"x\":5,\"y\":4,\"value\":5},{\"x\":5,\"y\":6,\"value\":2},{\"x\":6,\"y\":0,\"value\":9},{\"x\":6,\"y\":2,\"value\":7},{\"x\":6,\"y\":3,\"value\":4},{\"x\":6,\"y\":4,\"value\":6},{\"x\":6,\"y\":7,\"value\":8},{\"x\":7,\"y\":1,\"value\":1},{\"x\":7,\"y\":3,\"value\":2},{\"x\":7,\"y\":5,\"value\":8},{\"x\":7,\"y\":7,\"value\":4},{\"x\":7,\"y\":8,\"value\":6},{\"x\":8,\"y\":0,\"value\":6},{\"x\":8,\"y\":8,\"value\":5}]}";
             var result = JsonConvert.DeserializeObject<Puzzle>(response);
             _logger.LogInformation($"THAT -- {JsonConvert.SerializeObject(response)}");
             _logger.LogInformation($"this {response}");
@@ -136,8 +137,65 @@ namespace SudokuChallengeMVC.Controllers
             {
                 _logger.LogInformation($"{item}");
             }
+            GetAllNumbersOnXYRows(Puzzle, correctSquence);
+            FindIndexOfValue(correctSquence);
             return correctSquence;
 
+        }
+        private void FindIndexOfValue(List<int> sequence)
+        {
+            var start = new Squares();
+            var a = sequence.FindIndex(x => x == 7);
+            var b = Math.Abs(a / 9);
+            _logger.LogInformation($"b: {b}");
+            start.x = a;
+            start.y = a / 9;
+            var c = a - (9 * (start.y));
+
+            _logger.LogInformation($"Result -- x: {c} y: {start.y}");
+        }
+
+        private void GetCurrentPosition(int indexNumberInSequence)
+        {
+
+        }
+
+        private void GetAllNumbersOnXYRows(Puzzle puzzle, List<int> sequence)
+        {
+            //x: 2, y: 3 v: 2
+            // Puzzle puzzle, int x, int y
+            var xRow = new List<int>();
+            var yRow = new List<int>();
+            foreach (var item in puzzle.squares)
+            {
+                if (item.x == 3)
+                {
+                    yRow.Add(item.value);
+                }
+                if (item.y == 3)
+                {
+                    xRow.Add(item.value);
+                }
+            }
+            xRow.ForEach(i => _logger.LogInformation($"-- {i}"));
+
+            // get rows and columns where value A exists (x: 3, y: 4)
+            var xCol = new List<int>();
+            var yCol = new List<int>();
+            for (int x = 0; x < 81; x++)
+            {
+                if(puzzle.squares[x].x == 3)
+                {
+                    xCol.Add(x);
+                }
+                
+                if (puzzle.squares[x].y == 4)
+                {
+                    yCol.Add(x);
+                }
+                
+            }
+            xCol.ForEach(i => _logger.LogInformation($"++ {i}"));
         }
     }
 
